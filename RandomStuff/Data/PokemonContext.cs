@@ -5,7 +5,7 @@ namespace RandomStuff.Data
 {
     public class PokemonContext : DbContext
     {
-        public String ConnectionString = "Data Source=CS-19;Initial Catalog=Pokemon;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        public String ConnectionString = "Data Source=LAPTOP-E849FIKF;Initial Catalog=Pokemon;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
