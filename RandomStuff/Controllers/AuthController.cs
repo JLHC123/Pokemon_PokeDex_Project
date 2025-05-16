@@ -30,10 +30,10 @@ namespace RandomStuff.Controllers
         }
 
         [HttpPost("Login")]
-        public IActionResult Login(string UserName, string Password)
+        public IActionResult Login([FromBody] User login)
         {
             PokemonContext _context = new PokemonContext();
-            var user = _context.user.FirstOrDefault(u => u.UserName == UserName && u.Password == Password);
+            var user = _context.user.FirstOrDefault(u => u.UserName == login.UserName && u.Password == login.Password);
             if (user == null)
             {
                 return BadRequest(new { message = "Invalid username or password!" });
